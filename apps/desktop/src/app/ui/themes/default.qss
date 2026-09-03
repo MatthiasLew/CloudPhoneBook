@@ -1,0 +1,91 @@
+/* Dark Theme Stylesheet */
+QMainWindow, QDialog, QWidget {
+    background-color: #1e1e24;
+    color: #f0f0f5;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    font-size: 13px;
+}
+
+QLineEdit {
+    background-color: #2b2b36;
+    color: #ffffff;
+    border: 1px solid #3e3e4f;
+    border-radius: 6px;
+    padding: 8px 12px;
+    selection-background-color: #3b82f6;
+}
+QLineEdit:focus {
+    border: 1px solid #3b82f6;
+    background-color: #31313e;
+}
+
+QPushButton {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: 600;
+}
+QPushButton:hover {
+    background-color: #2563eb;
+}
+QPushButton:pressed {
+    background-color: #1d4ed8;
+}
+
+QPushButton#secondaryButton {
+    background-color: #374151;
+    color: #e5e7eb;
+}
+QPushButton#secondaryButton:hover {
+    background-color: #4b5563;
+}
+
+QPushButton#dangerButton {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+QPushButton#dangerButton:hover {
+    background-color: #dc2626;
+}
+
+QTableView {
+    background-color: #252530;
+    color: #f3f4f6;
+    gridline-color: #323242;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    selection-background-color: #3b82f6;
+    selection-color: #ffffff;
+    alternate-background-color: #202029;
+}
+
+QHeaderView::section {
+    background-color: #1a1a22;
+    color: #9ca3af;
+    padding: 8px;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid #374151;
+}
+
+QStatusBar {
+    background-color: #17171d;
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+QScrollBar:vertical {
+    background: #1e1e24;
+    width: 10px;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical {
+    background: #4b5563;
+    min-height: 20px;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #6b7280;
+}

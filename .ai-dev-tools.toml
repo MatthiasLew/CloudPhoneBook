@@ -1,0 +1,12 @@
+[project]
+name = "CloudPhoneBook"
+
+[commands]
+test = "python -m pytest apps/desktop/tests services/api/app/tests"
+
+[ignore]
+paths = [".venv", "dist", "build", ".pytest_cache", ".ruff_cache", ".mypy_cache"]
+
+[reports]
+directory = ".ai/reports"
+logs_directory = ".ai/logs"

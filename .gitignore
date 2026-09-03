@@ -230,3 +230,8 @@ local_cache/
 # Logs
 logs/
 *.log
+
+# AI tools & env
+.ai/
+.env
+
