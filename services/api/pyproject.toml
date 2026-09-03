@@ -1,13 +1,33 @@
 [project]
 name = "cloudphonebook-api"
 version = "0.1.0"
-description = "Backend API for CloudPhoneBook"
+description = "Backend REST API for CloudPhoneBook"
 requires-python = ">=3.11"
 
 dependencies = [
-    "fastapi",
-    "uvicorn[standard]"
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.28.0",
+    "pydantic>=2.6.0",
+    "pydantic-settings>=2.2.0",
+    "sqlalchemy>=2.0.28",
+    "alembic>=1.13.0",
+    "psycopg[binary]>=3.1.18",
+    "python-jose[cryptography]>=3.3.0",
+    "passlib[bcrypt]>=1.7.4",
+    "bcrypt>=4.0.0",
+    "python-multipart>=0.0.9",
+    "cloudphonebook-shared",
 ]
 
-[tool.uvicorn]
-factory = false
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "httpx>=0.27.0",
+    "ai_dev_cli_tools",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["app/tests"]
+pythonpath = ["app", "../../packages/shared"]
+asyncio_mode = "auto"
